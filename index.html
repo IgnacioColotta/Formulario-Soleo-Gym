@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inscripción - Soleo Gym</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="imagenes/soleo-gim.png" alt="Logo Izquierdo" class="logo logo-left">
+        <div class="form-container">
+            <h1>Soleo Gym</h1>
+            <h2>Formulario de Inscripción</h2>
+            <form action="/submit_form" method="post">
+                <div class="form-group">
+                    <label for="nombre">NOMBRE COMPLETO:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">CORREO ELECTRÓNICO:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">TELÉFONO:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="edad">EDAD:</label>
+                    <input type="number" id="edad" name="edad" required>
+                </div>
+                <div class="form-group">
+                    <label for="genero">GÉNERO:</label>
+                    <select id="genero" name="genero">
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="objetivos">OBJETIVOS DE ENTRENAMIENTO:</label>
+                    <textarea id="objetivos" name="objetivos" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="horario">HORARIO PREFERIDO:</label>
+                    <select id="horario" name="horario">
+                        <option value="mañana">Mañana</option>
+                        <option value="tarde">Tarde</option>
+                        <option value="noche">Noche</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        
+</body>
+</html>

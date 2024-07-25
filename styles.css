@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, green, blue); /* Fondo degradado de verde a azul */
+    background-size: cover;
+}
+
+header {
+    position: fixed; /* Fija el encabezado en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white; /* Fondo blanco para el encabezado */
+    display: flex;
+    justify-content: center; /* Centra el logo horizontalmente */
+    padding: 10px 0; /* Espacio alrededor del logo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional para el encabezado */
+    z-index: 1000; /* Asegura que el encabezado esté por encima del contenido */
+}
+
+.logo {
+    width: 150px; /* Tamaño del logo ajustado */
+}
+
+.main-content {
+    display: flex; /* Utiliza Flexbox para alinear el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    min-height: 100vh; /* Ocupa toda la altura de la ventana */
+    padding-top: 70px; /* Espacio superior para evitar superposición con el encabezado */
+    gap: 20px; /* Espacio entre el logo y el formulario */
+    flex-wrap: wrap; /* Permite que el contenido se envuelva en pantallas más pequeñas */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Centra el logo verticalmente */
+}
+
+.logo-left {
+    width: 200px; /* Tamaño de los logos en computadoras */
+}
+
+.form-container {
+    background-color: white; /* Fondo blanco del formulario */
+    padding: 20px; /* Espacio interno */
+    border-radius: 10px; /* Bordes redondeados opcionales */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra opcional para destacar el formulario */
+    max-width: 500px; /* Ancho máximo del formulario */
+    width: 100%; /* Ancho completo del formulario */
+    box-sizing: border-box; /* Incluye padding y border en el ancho */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+}
+
+h1, h2 {
+    text-align: center;
+    margin-top: 0;
+    color: green; /* Color del texto del título */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea,
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group button {
+    background-color: green; /* Color del botón */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #0056b3; /* Color de fondo del botón al pasar el ratón */
+}
+
+/* Media Queries para dispositivos móviles y tablets */
+@media (min-width: 769px) {
+    .main-content {
+        flex-direction: row; /* Alinea el logo y el formulario en fila en pantallas grandes */
+        align-items: center; /* Alinea el contenido verticalmente */
+        gap: 40px; /* Espacio mayor entre el logo y el formulario */
+    }
+
+    .logo-container {
+        display: flex;
+    }
+
+    .logo-left {
+        position: absolute;
+        
+    }
+
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column; /* Cambia a columna en dispositivos más pequeños */
+        gap: 10px; /* Menos espacio entre el logo y el formulario */
+        padding: 0; /* Elimina el padding en pantallas pequeñas */
+    }
+
+    .logo-container {
+        width: 100%; /* Hace que los logos ocupen todo el ancho */
+        justify-content: center;
+    }
+
+    .logo-left{
+
+        width: 150px; /* Tamaño más pequeño del logo en dispositivos móviles */
+        margin-left: 108px;
+        
+    }
+
+    .logo-left {
+        order: 1; /* Asegura que el logo izquierdo se muestre primero */
+    }
+
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 5px 0; /* Menos espacio en el encabezado */
+    }
+
+    .logo {
+        width: 120px; /* Tamaño aún más pequeño del logo en dispositivos móviles */
+    }
+
+    .form-container {
+        padding: 10px; /* Menos espacio interno en el formulario */
+        border-radius: 5px; /* Bordes redondeados más pequeños */
+    }
+
+    h1, h2 {
+        font-size: 18px; /* Tamaño de fuente más pequeño en dispositivos móviles */
+    }
+}
